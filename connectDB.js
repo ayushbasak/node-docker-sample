@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
-require('dotenv').config();
 
 async function connectDB(){
-    await mongoose.connect(process.env.MONGO_URI, {
+    await mongoose.connect('mongodb://mongo:27017/docker-node-mongo', {
             useNewUrlParser: true,
             useUnifiedTopology: true
         })
